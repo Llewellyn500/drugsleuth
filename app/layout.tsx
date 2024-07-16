@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Head from "next/head";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: [ "latin" ],
+  weight: "100"
+});
 
 export const metadata: Metadata = {
-  title: "DrugSlueth",
+  title: "DrugSleuth",
   description: "DrugSleuth helps identify drugs prescribed to patients by asking a series of targeted questions tailored for both healthcare professionals and patients. Answer questions about patient details, symptoms, drug appearance, usage, and more to get accurate drug identification.",
 };
 
@@ -29,7 +32,7 @@ export default function RootLayout({
         <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <body className={inter.className}>{children}</body>
+      <body className={poppins.className}>{children}</body>
     </html>
   );
 }
