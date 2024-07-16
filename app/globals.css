@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.custom-radio {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px; /* full rounded */
+  border: 3px solid #000000;
+  display: inline-block;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}

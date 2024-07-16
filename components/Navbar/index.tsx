@@ -30,10 +30,8 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-white shadow-md">
-      <div className="container mx-auto px-6 py-5 flex justify-between items-center">
-        <Link href="/">
-        <div className={smooch_Sans.className + " text-3xl text-black"}>DrugSleuth</div>
-        </Link>
+      <div className="container mx-auto px-6 py-5 flex justify-between items-center">        
+        <div className={smooch_Sans.className + " text-3xl text-black"}><a href='/'>DrugSleuth</a></div>
         <div className="hidden md:flex space-x-6">
           <Link href="/" className={`${linkClasses("/")} hover:text-[#6db5dc] transition duration-300`}>
             Home
