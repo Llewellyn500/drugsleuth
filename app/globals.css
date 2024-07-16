@@ -2,5 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
-
+.smooch-sans {
+  font-family: 'Smooch Sans', sans-serif !important;
+  font-weight: bold;
+}
