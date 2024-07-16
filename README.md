@@ -1,4 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+<img src="./public/images/social.png" width="100%"/>
+</div>
+
+---
+
+Welcome to my revolutionary AI-powered tool, designed with a single mission: to help you identify the drugs prescribed to you with ease and accuracy. Whether you're a healthcare professional or a concerned patient, my tool offers an intuitive and reliable solution to drug identification. This project, crafted with dedication and expertise, is a part of my Computer Science mini-project at KNUST, showcasing the incredible potential of AI in transforming healthcare. Join me on this journey to make medication management simpler and safer for everyone.
+
 
 ## Getting Started
 
