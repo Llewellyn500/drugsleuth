@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
   };
 
   const linkClasses = (path: string) => {
-    return pathname === path ? "text-blue-500 font-bold" : "text-black";
+    return pathname === path ? "text-[#4781a9] font-bold" : "text-black";
   };
 
   return (
@@ -33,13 +33,13 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-6 py-5 flex justify-between items-center">
         <div className={smooch_Sans.className + " text-3xl text-black"}>DrugSleuth</div>
         <div className="hidden md:flex space-x-6">
-          <Link href="/" className={linkClasses("/")}>
+          <Link href="/" className={`${linkClasses("/")} hover:text-[#6db5dc] transition duration-300`}>
             Home
           </Link>
-          <Link href="/about" className={linkClasses("/about")}>
+          <Link href="/about" className={`${linkClasses("/about")} hover:text-[#6db5dc] transition duration-300`}>
             About
           </Link>
-          <Link href="/contact" className={linkClasses("/contact")}>
+          <Link href="/contact" className={`${linkClasses("/contact")} hover:text-[#6db5dc] transition duration-300`}>
             Contact US
           </Link>
         </div>
@@ -70,13 +70,13 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden">
-          <Link href="/" className={`${linkClasses("/")} block px-4 py-2`} onClick={closeMenu}>
+          <Link href="/" className={`${linkClasses("/")} block px-4 py-2 hover:text-[#6db5dc]`} onClick={closeMenu}>
             Home
           </Link>
-          <Link href="/about" className={`${linkClasses("/about")} block px-4 py-2`} onClick={closeMenu}>
+          <Link href="/about" className={`${linkClasses("/about")} hover:text-[#6db5dc] block px-4 py-2`} onClick={closeMenu}>
             About
           </Link>
-          <Link href="/contact" className={`${linkClasses("/contact")} block px-4 py-2`} onClick={closeMenu}>
+          <Link href="/contact" className={`${linkClasses("/contact")} hover:text-[#6db5dc] block px-4 py-2`} onClick={closeMenu}>
             Contact US
           </Link>
         </div>

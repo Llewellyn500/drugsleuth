@@ -2,7 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.smooch-sans {
-  font-family: 'Smooch Sans', sans-serif !important;
-  font-weight: bold;
-}
