@@ -1,17 +1,18 @@
-"use client";
+'use client';
 import ProfessionalForm from "@/components/ProfessionalForm";
-import NonProfessionalForm from "@/components/PatientForm";
+import PatientForm from "@/components/PatientForm";
 import React, { useState } from "react";
 
 export default function SearchPage() {
   const [isProfessional, setIsProfessional] = useState<string | null>(null);
   const [fadeOut, setFadeOut] = useState<boolean>(false);
 
-  const handleSelection = (event: React.ChangeEvent<HTMLInputElement>) => {setFadeOut(true);
+  const handleSelection = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFadeOut(true);
     setTimeout(() => {
       setIsProfessional(event.target.value);
       setFadeOut(false);
-    }, 300); 
+    }, 300); // match the CSS transition duration
   };
 
   return (
@@ -27,60 +28,58 @@ export default function SearchPage() {
               healthcare professional or a patient. To ensure we offer the most
               relevant assistance.
             </p>
-            <>
-              <h2 className="text-xl font-semibold mb-4">
-                Are you a medical professional?
-              </h2>
-              <div className="flex justify-center space-x-8 text-xl font-semibold">
-                <label className="flex items-center space-x-2">
-                  <input
-                    type="radio"
-                    id="professionalYes"
-                    name="professional"
-                    value="yes"
-                    onChange={handleSelection}
-                    checked={isProfessional === "yes"}
-                    className="hidden"
-                  />
-                  <div
-                    className={`custom-radio ${
-                      isProfessional === "yes" ? "bg-[#4781a9]" : "bg-white"
-                    }`}
-                  ></div>
-                  <span>Yes</span>
-                </label>
-                <label className="flex items-center space-x-2">
-                  <input
-                    type="radio"
-                    id="professionalNo"
-                    name="professional"
-                    value="no"
-                    onChange={handleSelection}
-                    checked={isProfessional === "no"}
-                    className="hidden"
-                  />
-                  <div
-                    className={`custom-radio ${
-                      isProfessional === "no" ? "bg-[#4781a9]" : "bg-white"
-                    }`}
-                  ></div>
-                  <span>No</span>
-                </label>
-              </div>
-            </>
+            <h2 className="text-xl font-semibold mb-4">
+              Are you a medical professional?
+            </h2>
+            <div className="flex justify-center space-x-8 text-xl font-semibold">
+              <label className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  id="professionalYes"
+                  name="professional"
+                  value="yes"
+                  onChange={handleSelection}
+                  checked={isProfessional === "yes"}
+                  className="hidden"
+                />
+                <div
+                  className={`custom-radio ${
+                    isProfessional === "yes" ? "bg-[#4781a9]" : "bg-white"
+                  }`}
+                ></div>
+                <span>Yes</span>
+              </label>
+              <label className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  id="professionalNo"
+                  name="professional"
+                  value="no"
+                  onChange={handleSelection}
+                  checked={isProfessional === "no"}
+                  className="hidden"
+                />
+                <div
+                  className={`custom-radio ${
+                    isProfessional === "no" ? "bg-[#4781a9]" : "bg-white"
+                  }`}
+                ></div>
+                <span>No</span>
+              </label>
+            </div>
           </div>
         </main>
       )}
       {isProfessional === "yes" && (
-          <div className="transition-opacity duration-300 opacity-100">
-            <ProfessionalForm />
-          </div>
-        )}
+        <div className={`transition-opacity ease-in-out duration-300 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
+          <ProfessionalForm />
+        </div>
+      )}
       {isProfessional === "no" && (
-          <div className="transition-opacity duration-300 opacity-100">
-            <NonProfessionalForm />
-          </div>
-        )}
+        <div className={`transition-opacity ease-in-out duration-300 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
+          <PatientForm />
+        </div>
+      )}
     </>
   );
 }
