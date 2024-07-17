@@ -47,6 +47,17 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#cff2fb" />
         <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
+
+        <meta property="twitter:image" content="https://raw.githubusercontent.com/Llewellyn500/drugsleuth/main/public/drugsleuth-logo.webp" />
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:title" content="DrugSleuth"/>
+        <meta property="twitter:description" content="Pill puzzled? Sleuth it out!"/>
+
+        <meta property="og:image" content="https://raw.githubusercontent.com/Llewellyn500/drugsleuth/main/public/drugsleuth-logo.webp"/>
+        <meta property="og:site_name" content="DrugSleuth"/>
+        <meta property="og:title" content="DrugSleuth"/>
+        <meta property="og:description" content="Pill puzzled? Sleuth it out!" />
+        <meta property="og:url" content="https://drugsleuth.vercel.app/"/>
       </Head>
       <body className={poppins.className}>
         <Navbar />
