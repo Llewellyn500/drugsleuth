@@ -14,7 +14,7 @@ export default function SearchPage() {
       <div className="bg-white p-8 rounded-2xl shadow-lg max-w-6xl w-full text-center">
         <h1 className="text-3xl font-bold mb-4">Welcome to DrugSleuth</h1>
         <p className="mb-6 text-lg">
-          Your trusted resource for medication identification and information. Our goal is to provide accurate and helpful information about prescribed drugs, whether you're a healthcare professional or a patient. To ensure we offer the most relevant assistance.
+          Your trusted resource for medication identification and information. Our goal is to provide accurate and helpful information about prescribed drugs, whether you&apos;re a healthcare professional or a patient. To ensure we offer the most relevant assistance.
         </p>
         <h2 className="text-xl font-semibold mb-4">Are you a medical professional?</h2>
         <div className="flex justify-center space-x-8 text-xl font-semibold">
