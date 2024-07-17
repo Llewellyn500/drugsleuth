@@ -175,7 +175,7 @@ export default function ProfessionalForm() {
           </div>
           <div className="mb-4">
             <label htmlFor="allergies" className="block text-lg mb-2">
-              Are there any known allergies or medical conditions:
+              Are there any known allergies or medical conditions?
             </label>
             <textarea
               id="allergies"
