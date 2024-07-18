@@ -42,7 +42,7 @@ export default function ProfessionalForm() {
     const options = {
       method: "POST",
       body: JSON.stringify({
-        message: `Write me a fun story!"`,
+        message: `Write me a fun story! and feel free`,
       }),
       headers: {
         "Content-Type": "application/json",
