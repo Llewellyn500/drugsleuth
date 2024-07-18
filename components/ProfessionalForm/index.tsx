@@ -1,6 +1,6 @@
 "use client";
-import { SetStateAction, useState } from "react";
-import ReactMarkdown from "react-markdown";
+import { useState } from "react";
+import { marked } from "marked";
 import { useRef } from "react";
 import { Smooch_Sans } from "next/font/google";
 
@@ -42,7 +42,7 @@ export default function ProfessionalForm() {
     const options = {
       method: "POST",
       body: JSON.stringify({
-        message: `Take these details and tell me what you think, "My age:${age}, and my weight:${weight} and my allergies:${allergies}"`,
+        message: `Write me a fun story!"`,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -312,31 +312,34 @@ export default function ProfessionalForm() {
       <div ref={responseRef}>
         {isLoading ? (
           <>
-        <h3
-          className={
-            smooch_Sans.className +
-            " text-6xl text-center drop-shadow-lg pt-9 text-white"
-          }
-          >
-          Results
-        </h3>
-          <div className="bg-white p-8 rounded-2xl shadow-lg max-w-4xl w-full text-left mt-8">
-            <p>Loading...</p>
-          </div>
+            <h3
+              className={
+                smooch_Sans.className +
+                " text-6xl text-center drop-shadow-lg pt-9 text-white"
+              }
+            >
+              Results
+            </h3>
+            <div className="bg-white p-8 rounded-2xl shadow-lg max-w-4xl w-full text-left mt-8">
+              <p>Loading...</p>
+            </div>
           </>
         ) : (
           response && (
             <>
-            <h3
-          className={
-            smooch_Sans.className +
-            " text-6xl text-center drop-shadow-lg pt-9 text-white"
-          }
-          >
-          Results
-        </h3>
-              <div className="bg-white p-8 rounded-2xl shadow-lg max-w-4xl w-full text-left mt-8">
-                <ReactMarkdown>{response}</ReactMarkdown>
+              <h3
+                className={
+                  smooch_Sans.className +
+                  " text-6xl text-center drop-shadow-lg pt-9 text-white"
+                }
+              >
+                Results
+              </h3>
+              <div
+                className="bg-white p-8 rounded-2xl shadow-lg max-w-4xl w-full text-left mt-8 text-lg leading-loose"
+                dangerouslySetInnerHTML={{ __html: marked(response) }}
+              >
+                {/* <ReactMarkdown>{response}</ReactMarkdown> */}
                 {/* <p className="mt-2 text-red-500">
                 For further assessment and prescription needs, please see a
                 doctor or other healthcare provider.
