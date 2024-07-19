@@ -210,9 +210,17 @@ export default function Form() {
               min={1}
               max={10}
               value={symptomsSeverity}
-              onChange={(e) => setSymptomsSeverity(e.target.value)}
+              onChange={(e) => {
+                const value = e.target.value;
+                if (value === '') {
+                  setSymptomsSeverity(value);
+                } else {
+                  const numericValue = Math.max(1, Math.min(10, Number(value)));
+                  setSymptomsSeverity(numericValue.toString());
+                }
+              }}
               className="w-full p-3 border-2 border-black rounded-xl"
-            ></input>
+            />
           </div>
 
           <div className="mb-4">
