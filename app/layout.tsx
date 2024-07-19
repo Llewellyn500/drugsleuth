@@ -12,7 +12,45 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "DrugSleuth",
   description:
-    "DrugSleuth helps identify drugs prescribed to patients by asking a series of targeted questions tailored for both healthcare professionals and patients. Answer questions about patient details, symptoms, drug appearance, usage, and more to get accurate drug identification.",
+    "DrugSleuth helps identify drugs prescribed to patients by asking a series of targeted questions. Answer questions about patient details, symptoms, drug appearance, usage, and more to get accurate drug identification. and futher information on the drug",
+    generator: 'Next.js',
+    keywords: ['health', 'drugs', 'identification', 'medication', 'prescription', 'pharmacy', 'pill', 'tablet', 'capsule', 'drug', 'sleuth', 'sleuthing', 'sleuths', 'sleuthed', 'drugsleuth', 'patients', 'symptoms', 'appearance', 'usage', 'information', 'drug identification', 'drug information', 'drug sleuth', 'drug sleuthing', 'drug sleuths'],
+    creator: 'Llewellyn Adonteng Paintsil',
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    openGraph: {
+      title: 'DrugSleuth',
+      description: 'DrugSleuth helps identify drugs prescribed to patients by asking a series of targeted questions. Answer questions about patient details, symptoms, drug appearance, usage, and more to get accurate drug identification. and futher information on the drug',
+      url: 'https://drugsleuth.vercel.app/',
+      siteName: 'DrugSleuth',
+      images: [
+        {
+          url: 'https://raw.githubusercontent.com/Llewellyn500/drugsleuth/main/public/drugsleuth-logo.webp'
+        }
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
+    icons: {
+      icon: '/favicon-32x32.png',
+      shortcut: '/favicon-16x16.png',
+      apple: '/apple-touch-icon.png',
+      other: {
+        rel: 'apple-touch-icon-precomposed',
+        url: '/apple-touch-icon-precomposed.png',
+      },
+    },
+    manifest: '/site.webmanifest',
+    twitter: {
+      card: 'summary_large_image',
+      title: 'DrugSleuth',
+      description: 'DrugSleuth helps identify drugs prescribed to patients by asking a series of targeted questions. Answer questions about patient details, symptoms, drug appearance, usage, and more to get accurate drug identification. and futher information on the drug',
+      creator: '@llewellynAdont1',
+      images: ['https://raw.githubusercontent.com/Llewellyn500/drugsleuth/main/public/drugsleuth-logo.webp'],
+    },
 };
 
 export default function RootLayout({
@@ -23,8 +61,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>{String(metadata.title)}</title>
-        <meta name="description" content={metadata.description ?? ""} />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -47,17 +83,6 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#cff2fb" />
         <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
-
-        <meta property="twitter:image" content="https://raw.githubusercontent.com/Llewellyn500/drugsleuth/main/public/drugsleuth-logo.webp" />
-        <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:title" content="DrugSleuth"/>
-        <meta property="twitter:description" content="Pill puzzled? Sleuth it out!"/>
-
-        <meta property="og:image" content="https://raw.githubusercontent.com/Llewellyn500/drugsleuth/main/public/drugsleuth-logo.webp"/>
-        <meta property="og:site_name" content="DrugSleuth"/>
-        <meta property="og:title" content="DrugSleuth"/>
-        <meta property="og:description" content="Pill puzzled? Sleuth it out!" />
-        <meta property="og:url" content="https://drugsleuth.vercel.app/"/>
       </Head>
       <body className={poppins.className}>
         <Navbar />
