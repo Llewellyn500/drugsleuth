@@ -39,9 +39,9 @@ const Navbar: React.FC = () => {
           <Link href="/about" className={`${linkClasses("/about")} hover:text-[#6db5dc] transition duration-300`}>
             About
           </Link>
-          <Link href="/contact" className={`${linkClasses("/contact")} hover:text-[#6db5dc] transition duration-300`}>
+          {/* <Link href="/contact" className={`${linkClasses("/contact")} hover:text-[#6db5dc] transition duration-300`}>
             Contact US
-          </Link>
+          </Link> */}
         </div>
         <div className="md:hidden">
           <button
@@ -73,12 +73,12 @@ const Navbar: React.FC = () => {
           <Link href="/" className={`${linkClasses("/")} block px-4 py-2 hover:text-[#6db5dc]`} onClick={closeMenu}>
             Home
           </Link>
-          <Link href="/about" className={`${linkClasses("/about")} hover:text-[#6db5dc] block px-4 py-2`} onClick={closeMenu}>
+          <Link href="/about" className={`${linkClasses("/about")} hover:text-[#6db5dc] block px-4 py-2 pb-5`} onClick={closeMenu}>
             About
           </Link>
-          <Link href="/contact" className={`${linkClasses("/contact")} hover:text-[#6db5dc] block px-4 py-2`} onClick={closeMenu}>
+          {/* <Link href="/contact" className={`${linkClasses("/contact")} hover:text-[#6db5dc] block px-4 py-2`} onClick={closeMenu}>
             Contact US
-          </Link>
+          </Link> */}
         </div>
       )}
     </nav>
