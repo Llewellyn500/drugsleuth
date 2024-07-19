@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       siteName: 'DrugSleuth',
       images: [
         {
-          url: 'https://raw.githubusercontent.com/Llewellyn500/drugsleuth/main/public/drugsleuth-logo.webp'
+          url: 'https://raw.githubusercontent.com/Llewellyn500/drugsleuth/main/public/images/social.png'
         }
       ],
       locale: 'en_US',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       title: 'DrugSleuth',
       description: 'DrugSleuth helps identify drugs prescribed to patients by asking a series of targeted questions. Answer questions about patient details, symptoms, drug appearance, usage, and more to get accurate drug identification. and futher information on the drug',
       creator: '@llewellynAdont1',
-      images: ['https://raw.githubusercontent.com/Llewellyn500/drugsleuth/main/public/drugsleuth-logo.webp'],
+      images: ['https://raw.githubusercontent.com/Llewellyn500/drugsleuth/main/public/images/social.png'],
     },
 };
 
