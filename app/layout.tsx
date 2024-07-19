@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import Head from "next/head";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -87,6 +88,20 @@ export default function RootLayout({
       <body className={poppins.className}>
         <Navbar />
         {children}
+
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-BD7WNBNWG8`}
+        />
+        <Script id="ga-script" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-BD7WNBNWG8');
+        `}
+        </Script>
       </body>
     </html>
   );
