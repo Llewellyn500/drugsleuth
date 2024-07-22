@@ -58,7 +58,7 @@ export default function Form() {
     const options = {
       method: "POST",
       body: JSON.stringify({
-        message: `You are a world top pharmacist and you have only one job, to help patients identify whether the drugs prescribed to them is good for their condition or not, and suggest alternatives which could work better. If the drug is right, just tell them the benefits of the drug and other details such as the name of the drug, history, chemical makeup and everything there is to know about the drug, and give it in a systematic way and organized format. If you can provide official documents of the drug and images as well that would help. Just give everything there is to know of the drug. The patient filled a form and here is the info from the form: ("What is your age?": "${age}", "Do you have any chronic conditions":"${chronicConditions}", "Are you currently taking any medications? If so, specify":"${currentMeds}", "Have you recently taken any over-the-counter drugs or supplements? If so, specify.":"${overCounterDrugs}", "Do you have any known allergies? If so, specify":"${allergies}", "What symptoms are you experiencing?":"${symptoms}", "When did your symptoms start?":"${symptomsStart}", "Have you experienced these symptoms before?":"${symptomsExperience}", "How severe are your symptoms on a scale of 1 to 10?":"${symptomsSeverity}", "Are the symptoms constant or do they come and go?":"${symptomsVariable}", "Have your symptoms worsened or improved over time?":"${symptomsState}", "Do you smoke, drink alcohol, or use recreational drugs?":"${lifestyle}", "How would you describe your diet and exercise habits?":"${diet}", "Have there been any recent changes in your lifestyle or habits?":"${changes}", "Do any close family members have similar symptoms or conditions?":"${familySymptoms}", "Is there a history of specific diseases in your family?":"${familyHistory}", "Are you experiencing shortness of breath or a cough?":"${respiratoryIssues}", "Do you have nausea, vomiting, or diarrhea?":"${gastrointestinalIssues}", "Can you describe the type and location of the pain?":"${painIssues}", "Have you tried any treatments or medications for your current symptoms? If so, specify.":"${previousTreatments}", "What was the outcome?":"${outcome}", "What is the name of the drug you are taking?":"${drugName}", "What is the Brand name of the drug you are taking?":"${brandName}", "Can you describe the drug's appearance?":"${appearance}", "When did you start taking this drug?":"${time}", "How often do you take this drug and what is the dosage?":"${frequency}", "Where did you obtain this drug?":"${obtain}", "Was the drug provided with any packaging or information leaflet?":"${packaging}", "Are you following any specific instructions for taking this drug?":"${instructions}", "Do you have any questions about how to take this drug?":"${questions}", "Have you been advised to monitor any specific symptoms or reactions while taking this drug?":"${monitor}", "Do you have a follow-up appointment with your healthcare provider regarding this medication?":"${follow_up}"). If no information is provided in the form, just tell the patient to provide the information in a funny and interactive way. `,
+        message: `You are a world top pharmacist and you have only one job, to help patients identify whether the drugs prescribed to them is good for their condition or not, and suggest alternatives which could work better. If the drug is right, just tell them the benefits of the drug and other details such as the name of the drug, history, chemical makeup and everything there is to know about the drug, and give it in a systematic way and organized format. If you can provide official documents of the drug and images as well that would help. Just give everything there is to know of the drug. The patient filled a form and here is the info from the form: ("What is your age?": "${age}", "Do you have any chronic conditions":"${chronicConditions}", "Do you have any known allergies? If so, specify":"${allergies}", "What symptoms are you experiencing?":"${symptoms}", "When did your symptoms start?":"${symptomsStart}", "Have you experienced these symptoms before?":"${symptomsExperience}", "How severe are your symptoms on a scale of 1 to 10?":"${symptomsSeverity}", "Are the symptoms constant or do they come and go?":"${symptomsVariable}", "Have your symptoms worsened or improved over time?":"${symptomsState}", "Have you tried any treatments or medications for your current symptoms? If so, specify.":"${previousTreatments}", "What was the outcome?":"${outcome}", "What is the name of the drug you are taking?":"${drugName}", "What is the Brand name of the drug you are taking?":"${brandName}", "Can you describe the drug's appearance?":"${appearance}", "When did you start taking this drug?":"${time}", "How often do you take this drug and what is the dosage?":"${frequency}", "Where did you obtain this drug?":"${obtain}", "Was the drug provided with any packaging or information leaflet?":"${packaging}", "Are you following any specific instructions for taking this drug?":"${instructions}", "Do you have any questions about how to take this drug?":"${questions}", "Have you been advised to monitor any specific symptoms or reactions while taking this drug?":"${monitor}", "Do you have a follow-up appointment with your healthcare provider regarding this medication?":"${follow_up}"). If no information is provided in the form, just tell the patient to provide the information in a funny and interactive way. `,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -117,32 +117,7 @@ export default function Form() {
             ></input>
           </div>
 
-          <div className="mb-4">
-            <label htmlFor="currentMeds" className="block text-lg mb-2">
-              Are you currently taking any medications? If so, specify.
-            </label>
-            <input
-              type="text"
-              id="currentMeds"
-              value={currentMeds}
-              onChange={(e) => setCurrentMeds(e.target.value)}
-              className="w-full p-3 border-2 border-black rounded-xl"
-            ></input>
-          </div>
-
-          <div className="mb-4">
-            <label htmlFor="overCounterDrugs" className="block text-lg mb-2">
-              Have you recently taken any over-the-counter drugs or supplements?
-              If so, specify.
-            </label>
-            <input
-              type="text"
-              id="overCounterDrugs"
-              value={overCounterDrugs}
-              onChange={(e) => setOverCounterDrugs(e.target.value)}
-              className="w-full p-3 border-2 border-black rounded-xl"
-            ></input>
-          </div>
+         
 
           <div className="mb-4">
             <label htmlFor="allergies" className="block text-lg mb-2">
@@ -245,130 +220,6 @@ export default function Form() {
               id="symptomsState"
               value={symptomsState}
               onChange={(e) => setSymptomsState(e.target.value)}
-              className="w-full p-3 border-2 border-black rounded-xl"
-            ></input>
-          </div>
-        </fieldset>
-
-        <hr className="my-4 border-t-2 border-gray-200 mb-8" />
-
-        <fieldset>
-          <legend className="text-xl font-bold mb-4">
-            Lifestyle and Habits:
-          </legend>
-          <div className="mb-4">
-            <label htmlFor="lifestyle" className="block text-lg mb-2">
-              Do you smoke, drink alcohol, or use recreational drugs?
-            </label>
-            <input
-              type="text"
-              id="lifestyle"
-              value={lifestyle}
-              onChange={(e) => setLifestyle(e.target.value)}
-              className="w-full p-3 border-2 border-black rounded-xl"
-            />
-          </div>
-
-          <div className="mb-4">
-            <label htmlFor="diet" className="block text-lg mb-2">
-              How would you describe your diet and exercise habits?
-            </label>
-            <input
-              type="text"
-              id="diet"
-              value={diet}
-              onChange={(e) => setDiet(e.target.value)}
-              className="w-full p-3 border-2 border-black rounded-xl"
-            ></input>
-          </div>
-
-          <div className="mb-4">
-            <label htmlFor="changes" className="block text-lg mb-2">
-              Have there been any recent changes in your lifestyle or habits?
-            </label>
-            <input
-              type="text"
-              id="changes"
-              value={changes}
-              onChange={(e) => setChanges(e.target.value)}
-              className="w-full p-3 border-2 border-black rounded-xl"
-            ></input>
-          </div>
-        </fieldset>
-
-        <hr className="my-4 border-t-2 border-gray-200 mb-8" />
-
-        <fieldset>
-          <legend className="text-xl font-bold mb-4">Family History:</legend>
-          <div className="mb-4">
-            <label htmlFor="familySymptoms" className="block text-lg mb-2">
-              Do any close family members have similar symptoms or conditions?
-            </label>
-            <input
-              type="text"
-              id="familySymptoms"
-              value={familySymptoms}
-              onChange={(e) => setFamilySymptoms(e.target.value)}
-              className="w-full p-3 border-2 border-black rounded-xl"
-            />
-          </div>
-
-          <div className="mb-4">
-            <label htmlFor="familyHistory" className="block text-lg mb-2">
-              Is there a history of specific diseases in your family?
-            </label>
-            <input
-              type="text"
-              id="familyHistory"
-              value={familyHistory}
-              onChange={(e) => setFamilyHistory(e.target.value)}
-              className="w-full p-3 border-2 border-black rounded-xl"
-            ></input>
-          </div>
-        </fieldset>
-
-        <hr className="my-4 border-t-2 border-gray-200 mb-8" />
-
-        <fieldset>
-          <legend className="text-xl font-bold mb-4">
-            Specific Condition-Related Questions:
-          </legend>
-          <div className="mb-4">
-            <label htmlFor="respiratoryIssues" className="block text-lg mb-2">
-              Are you experiencing shortness of breath or a cough?
-            </label>
-            <input
-              type="text"
-              id="respiratoryIssues"
-              value={respiratoryIssues}
-              onChange={(e) => setRespiratoryIssues(e.target.value)}
-              className="w-full p-3 border-2 border-black rounded-xl"
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="gastrointestinalIssues"
-              className="block text-lg mb-2"
-            >
-              Do you have nausea, vomiting, or diarrhea?
-            </label>
-            <input
-              type="text"
-              id="gastrointestinalIssues"
-              value={gastrointestinalIssues}
-              onChange={(e) => setGastrointestinalIssues(e.target.value)}
-              className="w-full p-3 border-2 border-black rounded-xl"
-            ></input>
-          </div>
-          <div className="mb-4">
-            <label htmlFor="painIssues" className="block text-lg mb-2">
-              Can you describe the type and location of the pain?
-            </label>
-            <input
-              type="text"
-              id="painIssues"
-              value={painIssues}
-              onChange={(e) => setPainIssues(e.target.value)}
               className="w-full p-3 border-2 border-black rounded-xl"
             ></input>
           </div>
