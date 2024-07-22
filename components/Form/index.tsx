@@ -13,8 +13,6 @@ export default function Form() {
   // Set form field states
   const [age, setAge] = useState("");
   const [chronicConditions, setChronicConditions] = useState("");
-  const [currentMeds, setCurrentMeds] = useState("");
-  const [overCounterDrugs, setOverCounterDrugs] = useState("");
   const [allergies, setAllergies] = useState("");
   const [symptoms, setSymptoms] = useState("");
   const [symptomsStart, setSymptomsStart] = useState("");
@@ -22,14 +20,6 @@ export default function Form() {
   const [symptomsSeverity, setSymptomsSeverity] = useState("");
   const [symptomsVariable, setSymptomsVariable] = useState("");
   const [symptomsState, setSymptomsState] = useState("");
-  const [lifestyle, setLifestyle] = useState("");
-  const [diet, setDiet] = useState("");
-  const [changes, setChanges] = useState("");
-  const [familySymptoms, setFamilySymptoms] = useState("");
-  const [familyHistory, setFamilyHistory] = useState("");
-  const [respiratoryIssues, setRespiratoryIssues] = useState("");
-  const [gastrointestinalIssues, setGastrointestinalIssues] = useState("");
-  const [painIssues, setPainIssues] = useState("");
   const [previousTreatments, setPreviousTreatments] = useState("");
   const [outcome, setOutcome] = useState("");
   const [drugName, setDrugName] = useState("");
