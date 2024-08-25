@@ -9,6 +9,18 @@ Welcome to my revolutionary AI-powered tool, designed with a single mission: to 
 
 ## Getting Started
 
+Install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
 First, run the development server:
 
 ```bash
@@ -20,6 +32,14 @@ pnpm dev
 # or
 bun dev
 ```
+
+Create a .env.local file in the root directory and add the following:
+
+```bash
+GEMINI_API_KEY=YOUR_API_KEY
+```
+
+The api key can be obtained from [Gemini](https://aistudio.google.com/).
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
